@@ -1,14 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tiro+Bangla:ital@0;1&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Playfair Display", serif;
-}
+font-family: "Tiro Bangla", serif;}
 
 body {
-    background: #bbc6fa;
+    background: #008f408c;
+    /* font-family: 'Roboto', sans-serif; */
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        align-items: flex-start;
+        /* Center items vertically and horizontally */
+        min-height: 100vh;
+        /* Ensure full viewport height */
+        margin: 0;
+            padding: 20px;
 }
 
 .quote-box {
@@ -43,6 +52,7 @@ body {
     font-size: 32px;
     margin-bottom: 40px;
     position: relative;
+    color: #00ab0b;
 }
 
 .quote-box h2::after {
@@ -212,5 +222,54 @@ body {
         /* Decreased font size for footer */
         padding: 0.5rem;
         /* Reduced padding for footer */
+    }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+    .quote-box {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .quote-box {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .quote-box h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .quote-box blockquote {
+        font-size: 22px;
+    }
+
+    .quote-box button {
+        width: 130px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quote-box {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .quote-box h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .quote-box blockquote {
+        font-size: 18px;
+    }
+
+    .quote-box button {
+        width: 110px;
+        height: 40px;
     }
 }
