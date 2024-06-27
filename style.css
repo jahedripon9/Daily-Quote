@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+}
+
+body {
+    background: #bbc6fa;
+}
+
+.quote-box {
+    background: #fff;
+    width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    animation: fade-in 1s forwards;
+    /* Fade-in animation */
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.quote-box h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.quote-box h2::after {
+    content: '';
+    width: 75px;
+    height: 3px;
+    border-radius: 3px;
+    background: rgb(23, 124, 229);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.quote-box blockquote {
+    font-size: 26px;
+    min-height: 110px;
+    position: relative;
+    overflow: hidden;
+    /* Hide overflow for typing animation */
+}
+
+.quote-box blockquote::before,
+.quote-box blockquote::after {
+    content: '"';
+}
+
+/* Typing animation for blockquote */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.quote-box blockquote::before {
+    content: open-quote;
+    position: absolute;
+    left: -20px;
+    top: 0;
+    opacity: 0.5;
+}
+
+.quote-box span {
+    display: block;
+    margin-top: 10px;
+    float: right;
+    position: relative;
+}
+
+.quote-box span::before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: rgb(23, 124, 229);
+    position: absolute;
+    top: 50%;
+    left: -30px;
+}
+
+.quote-box div {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Button styles with hover effect */
+.quote-box button {
+    background: rgb(23, 124, 229);
+    color: #fff;
+    border-radius: 25px;
+    border: 1px solid rgb(23, 124, 229);
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.quote-box button img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.quote-box button:nth-child(2) {
+    background: transparent;
+    color: #333;
+}
+
+.quote-box button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.footer {
+    color: #333;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding: 10px;
+    flex-shrink: 0;
+    animation: slideInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.footer a {
+    color: #00a2ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #0085d3;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .quote-box {
+        width: 90%;
+        /* Adjusted width for smaller screens */
+        padding: 30px;
+        /* Reduced padding */
+    }
+
+    .quote-box h2 {
+        font-size: 2rem;
+        /* Decreased font size for heading */
+        margin-bottom: 1.5rem;
+        /* Reduced margin bottom */
+    }
+
+    .quote-box blockquote {
+        font-size: 1.6rem;
+        /* Decreased font size for quote */
+        line-height: 2.2rem;
+        /* Decreased line height */
+        min-height: auto;
+        /* Auto height for blockquote */
+        padding: 0 15px;
+        /* Reduced padding */
+    }
+
+    .quote-box span {
+        font-size: 1.2rem;
+        /* Decreased font size for author */
+    }
+
+    .quote-box div {
+        margin-top: 1.5rem;
+        /* Reduced margin top for buttons */
+    }
+
+    .quote-box button {
+        padding: 8px 16px;
+        /* Adjusted padding for buttons */
+        margin: 0 5px;
+        /* Reduced margin between buttons */
+    }
+
+    .footer {
+        font-size: 0.9rem;
+        /* Decreased font size for footer */
+        padding: 0.5rem;
+        /* Reduced padding for footer */
+    }
+}
