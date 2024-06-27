@@ -49,7 +49,7 @@ body {
 }
 
 .quote-box h2 {
-    font-size: 32px;
+    font-size: 35px;
     margin-bottom: 40px;
     position: relative;
     color: #00ab0b;
@@ -68,7 +68,7 @@ body {
 }
 
 .quote-box blockquote {
-    font-size: 26px;
+    font-size: 20px;
     min-height: 110px;
     position: relative;
     overflow: hidden;
@@ -190,9 +190,9 @@ body {
     }
 
     .quote-box blockquote {
-        font-size: 1.6rem;
+        font-size: 1.9rem;
         /* Decreased font size for quote */
-        line-height: 2.2rem;
+        line-height: 2.4rem;
         /* Decreased line height */
         min-height: auto;
         /* Auto height for blockquote */
@@ -201,7 +201,8 @@ body {
     }
 
     .quote-box span {
-        font-size: 1.2rem;
+        font-size: 0.6rem;
+        padding: 10px 0;
         /* Decreased font size for author */
     }
 
@@ -244,7 +245,7 @@ body {
     }
 
     .quote-box blockquote {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .quote-box button {
